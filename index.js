@@ -8,6 +8,13 @@
     - Численность населения (число)
     - Есть ли футбольный стадион (boolean [ true(да) / false(нет) ])
 */
+let informationOfCity = {
+    city: 'Zaporizhya',
+    country: 'Ukraine',
+    population: 732000,
+    stadion: true
+};
+console.log(informationOfCity);
 
 /* 
     Задание 2:
@@ -19,7 +26,10 @@
 
     ps: каждая сущность должна находиться в отдельной переменной
 */
-
+let height = 40;
+let width = 70;
+let square = height * width;
+console.log(square + ' см');
 /* 
     Задание 3:
     
@@ -34,7 +44,11 @@
     speedOfSecond = 114;
 
 */
-
+let time = 2,
+    speedOfFirst = 95,
+    speedOfSecond = 114,
+    distance = speedOfSecond * 2 + speedOfFirst * 2;
+console.log(distance);
 /* 
     Задание 4:
     
@@ -48,12 +62,27 @@
     - если randomNumber больше 50, то выведите в консоль сообщение : "randomNumber больше 50"
     - если ни один из вариантов не совпал, то выведите в консоль сообщение : "randomNumber больше 20, и меньше 50"
 */
-
+const randomNumber = Math.floor(Math.random() * 100);
+if (randomNumber < 20) {
+    console.log("randomNumber меньше 20");
+} else if (randomNumber > 50) {
+    console.log("randomNumber больше 50");
+} else {
+    console.log("randomNumber больше 20, и меньше 50");
+};
 /* 
     Задание 5:
     
     Условную конструкцию из задания 4, перепишите с помощью Switch Case
 */
-
-
-
+const randomNumber1 = Math.floor(Math.random() * 100);
+switch (true) {
+    case randomNumber1 < 20:
+        console.log("randomNumber меньше 20");
+        break;
+    case randomNumber1 > 50:
+        console.log("randomNumber больше 50");
+        break;
+    default:
+        console.log("randomNumber больше 20, и меньше 50");
+};
