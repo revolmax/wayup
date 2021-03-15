@@ -23,7 +23,7 @@ for (let i = 10; i <= 50; i += 1) {
 */
 let person = {
     name: 'Oleh',
-    lastName: 'Inkognito',
+    lastName: 'Inkognita',
     age: 41,
     pets: true
 };
@@ -48,9 +48,9 @@ console.log(person);
         'Я остановился',
         'для закупки', 
         'что и было поручено Савельичу.',
-        'приехал,',
+        'приехал',
         'где должен был',
-        'нужных вещей',
+        'нужных вещей,',
         'отправился по лавкам',
         'пробыть сутки',
         'Савельич'
@@ -66,14 +66,15 @@ const array = [
     'Я остановился',
     'для закупки',
     'что и было поручено Савельичу.',
-    'приехал,',
+    'приехал',
     'где должен был',
-    'нужных вещей',
+    'нужных вещей,',
     'отправился по лавкам',
     'пробыть сутки',
     'Савельич'
 ];
-const result = array.splice(',').join(' ');
+const txt = [3, 7, 0, 8, 11, 5, 9, 6, 4, 1, 12, 2, 10];
+const result = txt.map((i) => array[i]).join(' ');
 console.log(result)
 
 /* 
@@ -88,6 +89,11 @@ console.log(result)
 
     При вызове функции передайте ей, в качестве аргумента, свое имя и фамилию.
 */
+const personIdent = (firstName, lastName) => {
+    const fullName = `${firstName} ${lastName}`;
+    console.log(fullName);
+};
+personIdent('Oleh', 'Incognita');
 
 /* 
     Задание 5:
@@ -95,3 +101,10 @@ console.log(result)
     Вывести в консоль с помощью цикла WHILE все нечетные числа от 21 до 67
     
 */
+let odd = 20;
+while (odd <= 67) {
+    odd += 1
+    if (odd % 2 !== 0) {
+        console.log(odd)
+    }
+};
